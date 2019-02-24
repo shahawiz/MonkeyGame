@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en" id="full_game">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Monky Game</title>
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="css/style.css" type="text/css" />
+
+
+</head>
+
+<body >
+    <div class="row">
+        <div class="col-lg-12 col-md-12">
+            <div class="shoot-box">
+
+                <div class="login">
+                    <img src="images/logo.png" class="logo">
+                    <div class="form-group ">
+                        <input class="form-control" name="player-name" placeholder="Enter Your Name " required/>
+                        <select class="form-control" name="choose">
+                            <option disabled selected>Choose Game Mode</option>
+                            <option value="easy">easy</option>
+                            <option value="normal">normal</option>
+                        </select>
+                        <input type="button" id="Start_BTN" class="btn btn-block" value="🙈 Start" />
+                        <input type="button" class="btn btn-block" data-toggle="modal" data-target="#howToPlay" value="🐵 How To Play" />
+                    </div>
+                </div>
+                <div class="game" >
+                    <div class="counter">
+                        <p class="counter col-lg-12">
+
+                            <!--
+<span id="welcome_user">Welcome :  </span>
+ <span id="username" style="font-size: 30px;">login By :  </span>
+                                  -->
+
+
+
+                            <span id="minuts">
+                                00
+                            </span>
+                            <span id="sepra">:</span>
+                            <span id="second">
+                                00
+                            </span>
+                            <span id="of_sepra"> Of</span>
+                            <span id="timer">
+                                timer ->
+                            </span>
+                            &nbsp;&nbsp;&nbsp;
+                            <span id="score_txt">Score :</span>
+                            <span id="score">2000</span>
+
+                            <span id="gamelevel">Level : </span>
+                            <span id="gamelevel_icon"><img src="images/sad.gif" width="70px"></span>
+                        </p>
+                    </div>
+                    <div class="clearfix"></div>
+                    <div class="boxOfGame">
+
+                        <!--<div id="draggable" class="ui-widget-content"></div>-->
+                        <!-- <div id="ball"></div> -->
+                        <div id="Monkey_land" style="width: 100%;height: 30px;"> </div>
+                            <div id="main"></div>
+                       
+                        
+                    </div>
+                </div>
+                <div class="gameover text-center">
+                        <img src="images/sad.gif" width="120px">
+                    <p class=".h1">GAME OVER</p>
+                    <a href=""><input type="button" class="btn" value="Play Again" /></a>
+                </div>
+                <div class="winner text-center">
+                    <img src="images/happy.png" width="120px">
+                <p class=".h1">Congratulations 🎉</p>
+                <p class=".h1" id="win_Name"></p>
+                <span style="font-size: 35px;">Your score is :</span><p class=".h1" id="win_Score"></p>
+                <a href=""><input type="button" class="btn" value="Play Again" /></a>
+            </div>
+            </div>
+        </div>
+    </div>
+    <!-- Audio Files -->
+    <audio id="GameShot" src="sounds/shot.wav"></audio>
+    <audio id="GameTheme" src="sounds/game_theme.mp3" loop></audio>
+    <audio id="GameIntro" src="sounds/game_intro.wav" autoplay="autoplay" loop></audio>
+    <audio id="GameBombRed" src="sounds/bomb_red.wav" ></audio>
+    <audio id="GameGolden" src="sounds/golden.mp3" ></audio>
+    <audio id="GameScore" src="sounds/add_score.wav" ></audio>
+    <audio id="GameOver" src="sounds/game_over.wav" ></audio>
+    <!-- Audio Files -->
+    <script src="js/jQueryv3.3.1.js"></script>
+    <script src="js/jquery-ui-1.12.1.custom/jquery-ui.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/scripts.js"></script>
+    <script src="js/boxes.js"></script>
+    <script src="js/e-smart-hittest-jquery.js"></script>
+  
+
+<!-- The Modal -->
+<div class="modal" id="howToPlay">
+    <div class="modal-dialog">
+      <div class="modal-content">
+  
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title">How To Play</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+  
+        <!-- Modal body -->
+        <div class="modal-body">
+          <ul>
+              <li>
+                  Moving The Monkey
+                  <br/>
+                  You can move the monkey by using the arrows in keyboard
+                  <img src="images/key_move.png" width= "114px">
+              </li>
+              <li>
+                Hitting with Stones
+                <br/>
+                You can throw a stone using the space bar
+                &nbsp;<img src="images/key_Space_bar.png" width= "180px">
+            </li>
+          </ul>
+        </div>
+  
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+        </div>
+  
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
